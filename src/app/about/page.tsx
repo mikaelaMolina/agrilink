@@ -71,18 +71,19 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">Our Journey</h2>
+          <h2 className="text-3xl font-black text-slate-800 text-center mb-4 uppercase tracking-tight">Our Journey</h2>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-12" />
           <div className="space-y-0">
             {milestones.map((m, i) => (
               <div key={m.year} className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 bg-agri-600 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
+                  <div className="w-10 h-10 bg-brand-700 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">
                     {m.year.slice(2)}
                   </div>
-                  {i < milestones.length - 1 && <div className="w-0.5 h-full bg-agri-200 my-1" />}
+                  {i < milestones.length - 1 && <div className="w-0.5 h-full bg-brand-200 my-1" />}
                 </div>
                 <div className="pb-8">
-                  <div className="text-sm font-bold text-agri-600 mb-1">{m.year}</div>
+                  <div className="text-sm font-bold text-brand-700 mb-1">{m.year}</div>
                   <p className="text-slate-600">{m.event}</p>
                 </div>
               </div>
@@ -94,15 +95,16 @@ export default function AboutPage() {
       {/* Team */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">Leadership Team</h2>
+          <h2 className="text-3xl font-black text-slate-800 text-center mb-4 uppercase tracking-tight">Leadership Team</h2>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-12" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((t) => (
               <div key={t.name} className="bg-slate-50 rounded-xl p-6 text-center">
-                <div className="w-20 h-20 bg-agri-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
+                <div className="w-20 h-20 bg-brand-100 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl">
                   👤
                 </div>
                 <h3 className="font-semibold text-slate-800">{t.name}</h3>
-                <div className="text-sm text-agri-600 font-medium mb-2">{t.role}</div>
+                <div className="text-sm text-brand-700 font-medium mb-2">{t.role}</div>
                 <p className="text-xs text-slate-500">{t.bio}</p>
               </div>
             ))}

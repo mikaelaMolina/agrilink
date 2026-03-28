@@ -1,7 +1,7 @@
 const verificationSteps = [
   {
     icon: (
-      <svg className="w-8 h-8 text-agri-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-8 h-8 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
@@ -10,7 +10,7 @@ const verificationSteps = [
   },
   {
     icon: (
-      <svg className="w-8 h-8 text-agri-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-8 h-8 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
@@ -20,7 +20,7 @@ const verificationSteps = [
   },
   {
     icon: (
-      <svg className="w-8 h-8 text-agri-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-8 h-8 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
@@ -29,7 +29,7 @@ const verificationSteps = [
   },
   {
     icon: (
-      <svg className="w-8 h-8 text-agri-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-8 h-8 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
       </svg>
     ),
@@ -60,17 +60,18 @@ export default function TrustPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="bg-slate-900 text-white py-20 md:py-28">
+      <section className="bg-brand-950 text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-agri-600/10 border border-agri-500/20 rounded-full px-4 py-1.5 mb-6">
-            <svg className="w-4 h-4 text-agri-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-6">
+            <svg className="w-4 h-4 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
-            <span className="text-agri-400 text-sm font-medium">Your trust is our foundation</span>
+            <span className="text-teal-300 text-sm font-medium">Your trust is our foundation</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Trust &amp; Safety</h1>
-          <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
-            We take food safety and business integrity seriously. Every supplier is verified, 
+          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-4">Trust &amp; Safety</h1>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-6" />
+          <p className="text-xl text-teal-200 leading-relaxed max-w-3xl mx-auto">
+            We take food safety and business integrity seriously. Every supplier is verified,
             every product is traceable, and every transaction is protected.
           </p>
         </div>
@@ -79,17 +80,18 @@ export default function TrustPage() {
       {/* Verification Process */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">How We Verify Suppliers</h2>
+          <h2 className="text-3xl font-black text-slate-800 text-center mb-2 uppercase tracking-tight">How We Verify Suppliers</h2>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-4" />
           <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
             Every farm and producer on AgriLink goes through our rigorous 4-step verification process before they can list products.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {verificationSteps.map((step, i) => (
               <div key={step.title} className="relative">
-                <div className="bg-agri-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
+                <div className="bg-teal-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
                   {step.icon}
                 </div>
-                <div className="text-xs font-bold text-agri-600 mb-2">STEP {String(i + 1).padStart(2, "0")}</div>
+                <div className="text-xs font-bold text-brand-700 mb-2">STEP {String(i + 1).padStart(2, "0")}</div>
                 <h3 className="text-lg font-semibold text-slate-800 mb-2">{step.title}</h3>
                 <p className="text-sm text-slate-500 leading-relaxed">{step.description}</p>
               </div>
@@ -101,15 +103,16 @@ export default function TrustPage() {
       {/* Safety Standards */}
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">Safety &amp; Protection Standards</h2>
+          <h2 className="text-3xl font-black text-slate-800 text-center mb-2 uppercase tracking-tight">Safety &amp; Protection Standards</h2>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-4" />
           <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
             From payment protection to quality assurance, we have multiple layers of safety built into every transaction.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {safetyStandards.map((s) => (
               <div key={s.name} className="bg-white rounded-xl border border-slate-200 p-6">
-                <div className="w-10 h-10 bg-agri-50 rounded-lg flex items-center justify-center mb-3">
-                  <svg className="w-5 h-5 text-agri-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-10 h-10 bg-teal-50 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-5 h-5 text-brand-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
@@ -124,7 +127,8 @@ export default function TrustPage() {
       {/* Recognized Certifications */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">Recognized Certifications</h2>
+          <h2 className="text-3xl font-black text-slate-800 text-center mb-2 uppercase tracking-tight">Recognized Certifications</h2>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-4" />
           <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
             We validate and display these industry-standard certifications on verified supplier profiles.
           </p>
@@ -140,11 +144,12 @@ export default function TrustPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-agri-600 py-16">
+      <section className="bg-brand-700 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Have Questions About Our Safety Standards?</h2>
-          <p className="text-agri-100 mb-8">Our trust and safety team is available to answer any questions about our verification process.</p>
-          <button className="px-8 py-4 bg-white text-agri-700 font-semibold rounded-xl hover:bg-agri-50 transition-colors">
+          <h2 className="text-3xl font-black text-white uppercase tracking-tight mb-4">Have Questions About Our Safety Standards?</h2>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-6" />
+          <p className="text-teal-100 mb-8">Our trust and safety team is available to answer any questions about our verification process.</p>
+          <button className="px-8 py-4 bg-white text-brand-800 font-semibold rounded-xl hover:bg-teal-50 transition-colors">
             Contact Trust &amp; Safety Team
           </button>
         </div>
