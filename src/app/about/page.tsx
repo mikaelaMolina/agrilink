@@ -40,11 +40,10 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-agri-700 to-agri-800 text-white py-20 md:py-28">
+      <section className="bg-gradient-to-br from-agri-700 to-agri-900 text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Our Mission</h1>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-6 rounded-full" />
-          <p className="text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Mission</h1>
+          <p className="text-xl text-agri-100 leading-relaxed max-w-3xl mx-auto">
             AgriLink exists to create a fairer, more transparent agricultural supply chain. 
             We believe every farmer deserves direct market access, and every business deserves 
             to know exactly where their food comes from.
@@ -55,8 +54,7 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-2">What We Stand For</h2>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-10 rounded-full" />
+          <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">What We Stand For</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((v) => (
               <div key={v.title} className="text-center">
@@ -72,8 +70,7 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-2">Our Journey</h2>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-10 rounded-full" />
+          <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">Our Journey</h2>
           <div className="space-y-0">
             {milestones.map((m, i) => (
               <div key={m.year} className="flex gap-6">
@@ -96,8 +93,7 @@ export default function AboutPage() {
       {/* Team */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-2">Leadership Team</h2>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-10 rounded-full" />
+          <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">Leadership Team</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((t) => (
               <div key={t.name} className="bg-slate-50 rounded-xl p-6 text-center">

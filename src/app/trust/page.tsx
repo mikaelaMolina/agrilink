@@ -60,17 +60,16 @@ export default function TrustPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="bg-agri-700 text-white py-20 md:py-28">
+      <section className="bg-slate-900 text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-            <svg className="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="inline-flex items-center gap-2 bg-agri-600/10 border border-agri-500/20 rounded-full px-4 py-1.5 mb-6">
+            <svg className="w-4 h-4 text-agri-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
-            <span className="text-white/80 text-sm font-medium">Your trust is our foundation</span>
+            <span className="text-agri-400 text-sm font-medium">Your trust is our foundation</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-tight">Trust &amp; Safety</h1>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-6 rounded-full" />
-          <p className="text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Trust &amp; Safety</h1>
+          <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
             We take food safety and business integrity seriously. Every supplier is verified, 
             every product is traceable, and every transaction is protected.
           </p>
@@ -80,8 +79,7 @@ export default function TrustPage() {
       {/* Verification Process */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-2">How We Verify Suppliers</h2>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-4 rounded-full" />
+          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">How We Verify Suppliers</h2>
           <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
             Every farm and producer on AgriLink goes through our rigorous 4-step verification process before they can list products.
           </p>
@@ -103,8 +101,7 @@ export default function TrustPage() {
       {/* Safety Standards */}
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-2">Safety &amp; Protection Standards</h2>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-4 rounded-full" />
+          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">Safety &amp; Protection Standards</h2>
           <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
             From payment protection to quality assurance, we have multiple layers of safety built into every transaction.
           </p>
@@ -127,8 +124,7 @@ export default function TrustPage() {
       {/* Recognized Certifications */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-2">Recognized Certifications</h2>
-          <div className="w-16 h-1 bg-gold-400 mx-auto mb-4 rounded-full" />
+          <h2 className="text-3xl font-bold text-slate-800 text-center mb-4">Recognized Certifications</h2>
           <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
             We validate and display these industry-standard certifications on verified supplier profiles.
           </p>

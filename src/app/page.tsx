@@ -73,100 +73,45 @@ const testimonials = [
   },
 ];
 
-/* Top-requested service cards (icon-circle style from reference) */
-const topServices = [
-  {
-    label: "Browse Marketplace",
-    href: "/marketplace",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-      </svg>
-    ),
-  },
-  {
-    label: "Become a Supplier",
-    href: "/dashboard/supplier",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    label: "Start Buying",
-    href: "/dashboard/buyer",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
-      </svg>
-    ),
-  },
-  {
-    label: "Quality Assurance",
-    href: "/trust",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-  },
-  {
-    label: "Track Shipments",
-    href: "/dashboard/buyer",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
-      </svg>
-    ),
-  },
-  {
-    label: "About AgriLink",
-    href: "/about",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-];
-
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section — teal gradient overlay like reference */}
-      <section className="relative overflow-hidden">
-        {/* Background with teal overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-agri-700/95 via-agri-600/90 to-agri-700/95" />
-        <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyem0wLTMwVjBoLTEydjRoMTJ6TTI0IDI0aDEydi0ySDI0djJ6Ii8+PC9nPjwvZz48L3N2Zz4=')]" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 items-center py-16 md:py-24">
-            {/* Left: Heading + gold underline */}
-            <div>
-              <h1 className="text-4xl md:text-6xl font-black text-white uppercase leading-tight tracking-tight">
-                Top<br />Requested
-              </h1>
-              <div className="w-24 h-1.5 bg-gold-400 mt-4 mb-6 rounded-full" />
-              <p className="text-lg text-white/80 max-w-md">
-                The B2B marketplace connecting agricultural producers directly with commercial buyers. Fair prices, transparent supply chains.
-              </p>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(34,197,94,0.3),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.2),transparent_50%)]" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 bg-agri-600/10 border border-agri-500/20 rounded-full px-4 py-1.5 mb-6">
+              <span className="w-2 h-2 bg-agri-400 rounded-full animate-pulse" />
+              <span className="text-agri-400 text-sm font-medium">Trusted by 800+ businesses nationwide</span>
             </div>
-
-            {/* Right: Icon service cards grid (reference style) */}
-            <div className="grid grid-cols-3 gap-4">
-              {topServices.map((svc) => (
-                <Link
-                  key={svc.label}
-                  href={svc.href}
-                  className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-white/10 transition-colors group"
-                >
-                  <div className="w-16 h-16 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white group-hover:bg-white/25 transition-colors">
-                    {svc.icon}
-                  </div>
-                  <span className="text-white text-xs font-medium text-center leading-tight">{svc.label}</span>
-                </Link>
-              ))}
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+              Direct Farm-to-Business{" "}
+              <span className="text-agri-400">Sourcing</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl">
+              The B2B marketplace that connects agricultural producers directly with commercial buyers. 
+              Cut out the middlemen, get fair prices, and build transparent supply chains.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/dashboard/supplier"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-agri-600 rounded-xl hover:bg-agri-700 transition-all shadow-lg shadow-agri-600/25"
+              >
+                Become a Supplier
+                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/dashboard/buyer"
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-200 bg-white/10 border border-white/20 rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm"
+              >
+                Start Buying
+              </Link>
             </div>
           </div>
         </div>
@@ -178,7 +123,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-agri-700">{stat.value}</div>
+                <div className="text-2xl md:text-3xl font-bold text-slate-800">{stat.value}</div>
                 <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
               </div>
             ))}
@@ -186,14 +131,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Browse by Category — tab-style header like "Find City Services" */}
+      {/* Categories */}
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800">Browse Products:</h2>
-            <span className="text-sm font-bold uppercase tracking-wider text-agri-600 border-b-2 border-agri-600 pb-1">By Category</span>
-            <span className="text-slate-300">|</span>
-            <span className="text-sm font-bold uppercase tracking-wider text-slate-400 pb-1 hover:text-agri-600 cursor-pointer transition-colors">By Region</span>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Browse by Category</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto">Source fresh produce, grains, dairy, meat, and more directly from verified agricultural producers.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((cat) => (
@@ -215,20 +158,19 @@ export default function HomePage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">How It Works</h2>
-            <div className="w-16 h-1 bg-gold-400 mx-auto mb-4 rounded-full" />
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">How It Works</h2>
             <p className="text-slate-500 max-w-2xl mx-auto">From farm to business in four simple steps. No middlemen, no hidden fees.</p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             {steps.map((s, i) => (
-              <div key={s.step} className="relative text-center">
+              <div key={s.step} className="relative">
                 {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-agri-100 -translate-x-1/2" />
+                  <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-agri-100 -translate-x-1/2" />
                 )}
-                <div className="bg-agri-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-agri-200">
+                <div className="bg-agri-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
                   {s.icon}
                 </div>
-                <div className="text-xs font-bold text-agri-600 mb-2 uppercase tracking-wider">Step {s.step}</div>
+                <div className="text-xs font-bold text-agri-600 mb-2">STEP {s.step}</div>
                 <h3 className="text-lg font-semibold text-slate-800 mb-2">{s.title}</h3>
                 <p className="text-sm text-slate-500">{s.description}</p>
               </div>
@@ -241,8 +183,7 @@ export default function HomePage() {
       <section className="bg-slate-50 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">Trusted by Industry Leaders</h2>
-            <div className="w-16 h-1 bg-gold-400 mx-auto rounded-full" />
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Trusted by Industry Leaders</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((t) => (
@@ -271,13 +212,13 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/dashboard/supplier"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-agri-700 bg-white rounded-lg hover:bg-agri-50 transition-all"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-agri-700 bg-white rounded-xl hover:bg-agri-50 transition-all"
             >
               Become a Supplier
             </Link>
             <Link
               href="/dashboard/buyer"
-              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 rounded-lg hover:bg-white/10 transition-all"
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white border-2 border-white/30 rounded-xl hover:bg-white/10 transition-all"
             >
               Start Buying
             </Link>

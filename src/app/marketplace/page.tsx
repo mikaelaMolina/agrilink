@@ -37,12 +37,11 @@ export default function MarketplacePage() {
 
   return (
     <div className="bg-slate-50 min-h-screen">
-      {/* Header — teal banner */}
-      <div className="bg-agri-600 text-white">
+      {/* Header */}
+      <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-3xl font-bold mb-1">Marketplace</h1>
-          <div className="w-12 h-1 bg-gold-400 mb-3 rounded-full" />
-          <p className="text-white/70">Browse live listings from verified agricultural producers worldwide.</p>
+          <h1 className="text-3xl font-bold text-slate-800 mb-2">Marketplace</h1>
+          <p className="text-slate-500">Browse live listings from verified agricultural producers worldwide.</p>
         </div>
       </div>
 

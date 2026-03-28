@@ -1,21 +1,35 @@
 @import "tailwindcss";
 
 @theme {
-  /* Teal / dark cyan palette inspired by the reference design */
-  --color-agri-50: #e0f7fa;
-  --color-agri-100: #b2ebf2;
-  --color-agri-200: #80deea;
-  --color-agri-300: #4dd0e1;
-  --color-agri-400: #26c6da;
-  --color-agri-500: #00acc1;
-  --color-agri-600: #00838f;
-  --color-agri-700: #006064;
-  --color-agri-800: #004d40;
-  --color-agri-900: #00332c;
+  /* Teal / Dark Cyan palette — matching the San Jose gov style */
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+
+  /* Primary brand teal — the exact dark teal from the reference */
+  --color-brand-50: #eefcfa;
+  --color-brand-100: #d1f5f0;
+  --color-brand-200: #a3ebe1;
+  --color-brand-300: #6ddace;
+  --color-brand-400: #3ac3b5;
+  --color-brand-500: #1a9e93;
+  --color-brand-600: #0e7f78;
+  --color-brand-700: #0b6b66;
+  --color-brand-800: #085651;
+  --color-brand-900: #064540;
+  --color-brand-950: #003333;
 
   /* Gold accent for underlines and highlights */
-  --color-gold-400: #f5c518;
-  --color-gold-500: #d4a017;
+  --color-gold-400: #d4a843;
+  --color-gold-500: #c49a2f;
+  --color-gold-600: #a8841f;
 
   --color-slate-750: #293548;
   --color-slate-850: #172033;

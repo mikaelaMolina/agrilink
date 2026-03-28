@@ -34,16 +34,16 @@ export default function BuyerDashboard() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Header */}
-      <div className="bg-agri-600 text-white">
+      <div className="bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-2xl font-bold">Buyer Dashboard</h1>
-              <p className="text-white/70 text-sm">Welcome back, FreshMart Groceries</p>
+              <h1 className="text-2xl font-bold text-slate-800">Buyer Dashboard</h1>
+              <p className="text-slate-500 text-sm">Welcome back, FreshMart Groceries</p>
             </div>
             <Link
               href="/marketplace"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-agri-700 text-sm font-medium rounded-lg hover:bg-agri-50 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-agri-600 text-white text-sm font-medium rounded-lg hover:bg-agri-700 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -59,8 +59,8 @@ export default function BuyerDashboard() {
                 onClick={() => setActiveTab(tab)}
                 className={`pb-3 text-sm font-medium border-b-2 transition-colors capitalize ${
                   activeTab === tab
-                    ? "border-gold-400 text-white"
-                    : "border-transparent text-white/60 hover:text-white/90"
+                    ? "border-agri-600 text-agri-600"
+                    : "border-transparent text-slate-500 hover:text-slate-700"
                 }`}
               >
                 {tab}
