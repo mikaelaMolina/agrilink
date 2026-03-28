@@ -28,14 +28,15 @@ export default function SupplierDashboard() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Dashboard Header */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="bg-brand-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-slate-800">Supplier Dashboard</h1>
-              <p className="text-slate-500 text-sm">Welcome back, Sunrise Valley Farm</p>
+              <h1 className="text-2xl font-black uppercase tracking-tight">Supplier Dashboard</h1>
+              <div className="w-12 h-1 bg-gold-500 mt-2 mb-1" />
+              <p className="text-teal-200 text-sm">Welcome back, Sunrise Valley Farm</p>
             </div>
-            <button className="inline-flex items-center gap-2 px-4 py-2.5 bg-agri-600 text-white text-sm font-medium rounded-lg hover:bg-agri-700 transition-colors">
+            <button className="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-brand-800 text-sm font-medium rounded-lg hover:bg-teal-50 transition-colors">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
@@ -51,8 +52,8 @@ export default function SupplierDashboard() {
                 onClick={() => setActiveTab(tab)}
                 className={`pb-3 text-sm font-medium border-b-2 transition-colors capitalize ${
                   activeTab === tab
-                    ? "border-agri-600 text-agri-600"
-                    : "border-transparent text-slate-500 hover:text-slate-700"
+                    ? "border-brand-600 text-brand-700"
+                    : "border-transparent text-teal-200/70 hover:text-white"
                 }`}
               >
                 {tab}
@@ -100,7 +101,7 @@ export default function SupplierDashboard() {
                   <tbody className="divide-y divide-slate-100">
                     {orders.map((order) => (
                       <tr key={order.id} className="hover:bg-slate-50">
-                        <td className="px-6 py-4 text-sm font-medium text-agri-600">{order.id}</td>
+                        <td className="px-6 py-4 text-sm font-medium text-brand-700">{order.id}</td>
                         <td className="px-6 py-4 text-sm text-slate-700">{order.buyer}</td>
                         <td className="px-6 py-4 text-sm text-slate-500">{order.items}</td>
                         <td className="px-6 py-4 text-sm font-medium text-slate-800">{order.total}</td>
@@ -128,7 +129,7 @@ export default function SupplierDashboard() {
           <div className="bg-white rounded-xl border border-slate-200">
             <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
               <h2 className="font-semibold text-slate-800">My Inventory</h2>
-              <button className="text-sm text-agri-600 font-medium hover:text-agri-700">+ Add Product</button>
+              <button className="text-sm text-brand-700 font-medium hover:text-brand-800">+ Add Product</button>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -157,7 +158,7 @@ export default function SupplierDashboard() {
                       </td>
                       <td className="px-6 py-4 text-sm text-slate-600">{item.orders}</td>
                       <td className="px-6 py-4">
-                        <button className="text-sm text-agri-600 hover:text-agri-700 font-medium mr-3">Edit</button>
+                        <button className="text-sm text-brand-700 hover:text-brand-800 font-medium mr-3">Edit</button>
                         <button className="text-sm text-red-500 hover:text-red-600 font-medium">Remove</button>
                       </td>
                     </tr>
@@ -190,7 +191,7 @@ export default function SupplierDashboard() {
                 <tbody className="divide-y divide-slate-100">
                   {orders.map((order) => (
                     <tr key={order.id} className="hover:bg-slate-50">
-                      <td className="px-6 py-4 text-sm font-medium text-agri-600">{order.id}</td>
+                      <td className="px-6 py-4 text-sm font-medium text-brand-700">{order.id}</td>
                       <td className="px-6 py-4 text-sm text-slate-700">{order.buyer}</td>
                       <td className="px-6 py-4 text-sm text-slate-500">{order.items}</td>
                       <td className="px-6 py-4 text-sm font-medium text-slate-800">{order.total}</td>
@@ -205,7 +206,7 @@ export default function SupplierDashboard() {
                       </td>
                       <td className="px-6 py-4 text-sm text-slate-500">{order.date}</td>
                       <td className="px-6 py-4">
-                        <button className="text-sm text-agri-600 hover:text-agri-700 font-medium">View</button>
+                        <button className="text-sm text-brand-700 hover:text-brand-800 font-medium">View</button>
                       </td>
                     </tr>
                   ))}

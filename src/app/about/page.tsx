@@ -40,10 +40,10 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-agri-700 to-agri-900 text-white py-20 md:py-28">
+      <section className="bg-gradient-to-br from-brand-800 to-brand-950 text-white py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Mission</h1>
-          <p className="text-xl text-agri-100 leading-relaxed max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">Our Mission</h1>
+          <p className="text-xl text-teal-100 leading-relaxed max-w-3xl mx-auto">
             AgriLink exists to create a fairer, more transparent agricultural supply chain. 
             We believe every farmer deserves direct market access, and every business deserves 
             to know exactly where their food comes from.
@@ -54,7 +54,8 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">What We Stand For</h2>
+          <h2 className="text-3xl font-black text-slate-800 text-center mb-4 uppercase tracking-tight">What We Stand For</h2>
+          <div className="w-16 h-1.5 bg-gold-500 mx-auto mb-12" />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((v) => (
               <div key={v.title} className="text-center">

@@ -34,16 +34,17 @@ export default function BuyerDashboard() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Header */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="bg-brand-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-slate-800">Buyer Dashboard</h1>
-              <p className="text-slate-500 text-sm">Welcome back, FreshMart Groceries</p>
+              <h1 className="text-2xl font-black uppercase tracking-tight">Buyer Dashboard</h1>
+              <div className="w-12 h-1 bg-gold-500 mt-2 mb-1" />
+              <p className="text-teal-200 text-sm">Welcome back, FreshMart Groceries</p>
             </div>
             <Link
               href="/marketplace"
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-agri-600 text-white text-sm font-medium rounded-lg hover:bg-agri-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-brand-800 text-sm font-medium rounded-lg hover:bg-teal-50 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -59,8 +60,8 @@ export default function BuyerDashboard() {
                 onClick={() => setActiveTab(tab)}
                 className={`pb-3 text-sm font-medium border-b-2 transition-colors capitalize ${
                   activeTab === tab
-                    ? "border-agri-600 text-agri-600"
-                    : "border-transparent text-slate-500 hover:text-slate-700"
+                    ? "border-brand-600 text-brand-700"
+                    : "border-transparent text-teal-200/70 hover:text-white"
                 }`}
               >
                 {tab}
@@ -91,7 +92,7 @@ export default function BuyerDashboard() {
               <div className="bg-white rounded-xl border border-slate-200">
                 <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
                   <h2 className="font-semibold text-slate-800">Recent Orders</h2>
-                  <button onClick={() => setActiveTab("orders")} className="text-sm text-agri-600 font-medium">View All</button>
+                  <button onClick={() => setActiveTab("orders")} className="text-sm text-brand-700 font-medium">View All</button>
                 </div>
                 <div className="divide-y divide-slate-100">
                   {recentOrders.slice(0, 3).map((order) => (
@@ -116,7 +117,7 @@ export default function BuyerDashboard() {
               <div className="bg-white rounded-xl border border-slate-200">
                 <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
                   <h2 className="font-semibold text-slate-800">Active Shipments</h2>
-                  <button onClick={() => setActiveTab("tracking")} className="text-sm text-agri-600 font-medium">Track All</button>
+                  <button onClick={() => setActiveTab("tracking")} className="text-sm text-brand-700 font-medium">Track All</button>
                 </div>
                 <div className="divide-y divide-slate-100">
                   {shipments.map((s) => (
@@ -127,7 +128,7 @@ export default function BuyerDashboard() {
                       </div>
                       <div className="text-xs text-slate-500 mb-2">{s.from} → {s.to}</div>
                       <div className="w-full bg-slate-100 rounded-full h-2">
-                        <div className="bg-agri-500 h-2 rounded-full transition-all" style={{ width: `${s.progress}%` }} />
+                        <div className="bg-brand-600 h-2 rounded-full transition-all" style={{ width: `${s.progress}%` }} />
                       </div>
                       <div className="text-xs text-slate-400 mt-1">{s.progress}% complete &middot; {s.carrier}</div>
                     </div>
@@ -143,7 +144,7 @@ export default function BuyerDashboard() {
           <div className="bg-white rounded-xl border border-slate-200">
             <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
               <h2 className="font-semibold text-slate-800">Order History</h2>
-              <button className="text-sm text-agri-600 font-medium hover:text-agri-700">Download Invoices</button>
+              <button className="text-sm text-brand-700 font-medium hover:text-brand-800">Download Invoices</button>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -161,7 +162,7 @@ export default function BuyerDashboard() {
                 <tbody className="divide-y divide-slate-100">
                   {recentOrders.map((order) => (
                     <tr key={order.id} className="hover:bg-slate-50">
-                      <td className="px-6 py-4 text-sm font-medium text-agri-600">{order.id}</td>
+                      <td className="px-6 py-4 text-sm font-medium text-brand-700">{order.id}</td>
                       <td className="px-6 py-4 text-sm text-slate-700">{order.supplier}</td>
                       <td className="px-6 py-4 text-sm text-slate-500">{order.items}</td>
                       <td className="px-6 py-4 text-sm font-medium text-slate-800">{order.total}</td>
@@ -174,7 +175,7 @@ export default function BuyerDashboard() {
                       </td>
                       <td className="px-6 py-4 text-sm text-slate-500">{order.eta}</td>
                       <td className="px-6 py-4 flex gap-2">
-                        <button className="text-sm text-agri-600 hover:text-agri-700 font-medium">View</button>
+                        <button className="text-sm text-brand-700 hover:text-brand-800 font-medium">View</button>
                         <button className="text-sm text-slate-500 hover:text-slate-700 font-medium">Invoice</button>
                       </td>
                     </tr>
@@ -207,7 +208,7 @@ export default function BuyerDashboard() {
                   <div className="text-sm text-slate-600 shrink-0 w-40 truncate" title={s.from}>📍 {s.from}</div>
                   <div className="flex-1">
                     <div className="w-full bg-slate-100 rounded-full h-3 relative">
-                      <div className="bg-agri-500 h-3 rounded-full transition-all" style={{ width: `${s.progress}%` }} />
+                      <div className="bg-brand-600 h-3 rounded-full transition-all" style={{ width: `${s.progress}%` }} />
                       <div className="absolute top-1/2 -translate-y-1/2 transition-all" style={{ left: `${s.progress}%` }}>
                         <span className="text-lg -ml-2">🚛</span>
                       </div>
@@ -226,7 +227,7 @@ export default function BuyerDashboard() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {favoriteFarms.map((farm) => (
               <div key={farm.name} className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-agri-50 rounded-xl flex items-center justify-center text-2xl mb-3">🌱</div>
+                <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-2xl mb-3">🌱</div>
                 <h3 className="font-semibold text-slate-800 text-sm">{farm.name}</h3>
                 <p className="text-xs text-slate-500 mt-1 flex items-center gap-1">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -237,9 +238,9 @@ export default function BuyerDashboard() {
                 <div className="flex items-center gap-2 mt-2">
                   <span className="text-yellow-500 text-xs">★ {farm.rating}</span>
                   <span className="text-xs text-slate-400">&middot; {farm.products} products</span>
-                  {farm.organic && <span className="px-1.5 py-0.5 bg-agri-50 text-agri-700 text-xs rounded">Organic</span>}
+                  {farm.organic && <span className="px-1.5 py-0.5 bg-teal-50 text-brand-700 text-xs rounded">Organic</span>}
                 </div>
-                <Link href="/marketplace" className="mt-3 block text-center text-sm text-agri-600 font-medium hover:text-agri-700 border border-agri-200 rounded-lg py-1.5">
+                <Link href="/marketplace" className="mt-3 block text-center text-sm text-brand-700 font-medium hover:text-brand-800 border border-brand-200 rounded-lg py-1.5">
                   View Products
                 </Link>
               </div>

@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 
 const products = [
   { id: 1, name: "Organic Roma Tomatoes", farm: "Sunrise Valley Farm", location: "California, USA", price: 2.40, unit: "kg", minOrder: "500 kg", category: "Vegetables", organic: true, harvest: "2026-03-15", rating: 4.8, reviews: 42, image: "🍅" },
@@ -38,10 +37,11 @@ export default function MarketplacePage() {
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Header */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="bg-brand-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-3xl font-bold text-slate-800 mb-2">Marketplace</h1>
-          <p className="text-slate-500">Browse live listings from verified agricultural producers worldwide.</p>
+          <h1 className="text-3xl font-black uppercase tracking-tight mb-2">Marketplace</h1>
+          <div className="w-16 h-1 bg-gold-500 mb-3" />
+          <p className="text-teal-200">Browse live listings from verified agricultural producers worldwide.</p>
         </div>
       </div>
 
@@ -49,62 +49,35 @@ export default function MarketplacePage() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar Filters */}
           <aside className="lg:w-64 shrink-0">
-            <div className="bg-white rounded-xl border border-slate-200 p-6 sticky top-24">
+            <div className="bg-white rounded-xl border border-slate-200 p-6 sticky top-36">
               <h2 className="font-semibold text-slate-800 mb-4">Filters</h2>
-
-              {/* Search */}
               <div className="mb-6">
                 <label htmlFor="search" className="text-sm text-slate-600 mb-1 block">Search</label>
-                <input
-                  id="search"
-                  type="text"
-                  placeholder="Product or farm..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-agri-500 focus:border-transparent"
-                />
+                <input id="search" type="text" placeholder="Product or farm..." value={search} onChange={(e) => setSearch(e.target.value)}
+                  className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent" />
               </div>
-
-              {/* Category */}
               <div className="mb-6">
                 <label className="text-sm text-slate-600 mb-2 block">Category</label>
                 <div className="space-y-1">
                   {categoryFilters.map((c) => (
-                    <button
-                      key={c}
-                      onClick={() => setCategory(c)}
-                      className={`block w-full text-left px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                        category === c ? "bg-agri-50 text-agri-700 font-medium" : "text-slate-600 hover:bg-slate-50"
-                      }`}
-                    >
+                    <button key={c} onClick={() => setCategory(c)}
+                      className={`block w-full text-left px-3 py-1.5 rounded-lg text-sm transition-colors ${category === c ? "bg-brand-50 text-brand-700 font-medium" : "text-slate-600 hover:bg-slate-50"}`}>
                       {c}
                     </button>
                   ))}
                 </div>
               </div>
-
-              {/* Organic */}
               <div className="mb-6">
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={organicOnly}
-                    onChange={(e) => setOrganicOnly(e.target.checked)}
-                    className="w-4 h-4 text-agri-600 rounded border-slate-300 focus:ring-agri-500"
-                  />
+                  <input type="checkbox" checked={organicOnly} onChange={(e) => setOrganicOnly(e.target.checked)}
+                    className="w-4 h-4 text-brand-600 rounded border-slate-300 focus:ring-brand-500" />
                   <span className="text-sm text-slate-600">Organic Certified Only</span>
                 </label>
               </div>
-
-              {/* Sort */}
               <div>
                 <label htmlFor="sort" className="text-sm text-slate-600 mb-1 block">Sort By</label>
-                <select
-                  id="sort"
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-agri-500"
-                >
+                <select id="sort" value={sortBy} onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
                   <option value="name">Name (A-Z)</option>
                   <option value="price-low">Price: Low to High</option>
                   <option value="price-high">Price: High to Low</option>
@@ -119,23 +92,19 @@ export default function MarketplacePage() {
             <div className="flex items-center justify-between mb-6">
               <p className="text-sm text-slate-500">{filtered.length} products found</p>
             </div>
-
             <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {filtered.map((product) => (
                 <div key={product.id} className="bg-white rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition-shadow group">
-                  {/* Product Image Placeholder */}
                   <div className="bg-slate-50 h-40 flex items-center justify-center text-6xl group-hover:scale-105 transition-transform">
                     {product.image}
                   </div>
-
                   <div className="p-5">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="font-semibold text-slate-800 text-sm leading-tight">{product.name}</h3>
                       {product.organic && (
-                        <span className="shrink-0 ml-2 px-2 py-0.5 bg-agri-50 text-agri-700 text-xs font-medium rounded-full">Organic</span>
+                        <span className="shrink-0 ml-2 px-2 py-0.5 bg-teal-50 text-brand-700 text-xs font-medium rounded-full">Organic</span>
                       )}
                     </div>
-
                     <p className="text-xs text-slate-500 mb-1">{product.farm}</p>
                     <p className="text-xs text-slate-400 mb-3 flex items-center gap-1">
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -144,32 +113,25 @@ export default function MarketplacePage() {
                       </svg>
                       {product.location}
                     </p>
-
                     <div className="flex items-center gap-1 mb-3">
                       <span className="text-yellow-500 text-xs">★</span>
                       <span className="text-xs font-medium text-slate-700">{product.rating}</span>
                       <span className="text-xs text-slate-400">({product.reviews} reviews)</span>
                     </div>
-
                     <div className="flex items-end justify-between">
                       <div>
-                        <div className="text-lg font-bold text-agri-700">${product.price.toFixed(2)}<span className="text-xs font-normal text-slate-400">/{product.unit}</span></div>
+                        <div className="text-lg font-bold text-brand-700">${product.price.toFixed(2)}<span className="text-xs font-normal text-slate-400">/{product.unit}</span></div>
                         <div className="text-xs text-slate-400">Min: {product.minOrder}</div>
                       </div>
                       <div className="flex gap-2">
-                        <button className="px-3 py-1.5 text-xs font-medium text-agri-700 border border-agri-200 rounded-lg hover:bg-agri-50 transition-colors">
-                          Get Quote
-                        </button>
-                        <button className="px-3 py-1.5 text-xs font-medium text-white bg-agri-600 rounded-lg hover:bg-agri-700 transition-colors">
-                          Order
-                        </button>
+                        <button className="px-3 py-1.5 text-xs font-medium text-brand-700 border border-brand-200 rounded-lg hover:bg-brand-50 transition-colors">Get Quote</button>
+                        <button className="px-3 py-1.5 text-xs font-medium text-white bg-brand-700 rounded-lg hover:bg-brand-800 transition-colors">Order</button>
                       </div>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-
             {filtered.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-4xl mb-4">🔍</div>
